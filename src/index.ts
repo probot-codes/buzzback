@@ -7,7 +7,7 @@ export default {
   bootstrap({ strapi }: { strapi: Core.Strapi }) {
     const io = new Server(strapi.server.httpServer, {
       cors: {
-        origin: "http://localhost:5174",
+        origin: "*",
         methods: ["GET", "POST"],
         allowedHeaders: ["my-custom-header"],
         credentials: true,
